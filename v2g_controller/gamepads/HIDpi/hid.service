@@ -1,0 +1,15 @@
+[Unit]
+Description=Gamepad HID service
+After=bluetooth.target
+Requires=bluetooth.target
+
+[Service]
+Type=exec
+ExecStart=/bin/bash /home/pi/v2g/run.sh -bt AUTO
+ExecStartPre=timeout 60s bash -c 'until ip a s dev can0; do sleep 1; done'
+WorkingDirectory=/home/pi/v2g/
+Restart=on-success
+User=pi
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<record>
+	<!-- Service Class ID List -->
+	<attribute id="0x0001">
+		<sequence>
+			<!-- HID Class -->
+			<uuid value="0x1124" />
+		</sequence>
+	</attribute>
+	<!-- Protocol Descriptor List -->
+	<attribute id="0x0004">
+		<sequence>
+			<sequence>
+				<!-- L2CAP  -->
+				<uuid value="0x0100" />
+				<!-- HID Control Port -->
+				<uint16 value="0x0011" />
+			</sequence>
+			<sequence>
+				<!-- HID Protocol -->
+				<uuid value="0x0011" />
+			</sequence>
+		</sequence>
+	</attribute>
+	<!-- Browse Group List -->
+	<attribute id="0x0005">
+		<sequence>
+			<uuid value="0x1002" />
+		</sequence>
+	</attribute>
+	<!-- Language Base Attribute ID List -->
+	<attribute id="0x0006">
+		<sequence>
+			<!-- English -->
+			<uint16 value="0x656e" />
+			<!-- UTF-8 Encoding -->
+			<uint16 value="0x006a" />
+			<!-- Primary Language Base ID -->
+			<uint16 value="0x0100" />
+		</sequence>
+	</attribute>
+	<!-- Additional Protocol Descriptor Lists -->
+	<attribute id="0x000d">
+		<sequence>
+			<sequence>
+				<sequence>
+					<!-- L2CAP  -->
+					<uuid value="0x0100" />
+					<!-- HID Interrupt Port -->
+					<uint16 value="0x0013" />
+				</sequence>
+				<sequence>
+					<!-- HID Protocol -->
+					<uuid value="0x0011" />
+				</sequence>
+			</sequence>
+		</sequence>
+	</attribute>
+	<!-- Bluetooth Profile Descriptor List -->
+	<attribute id="0x0009">
+		<sequence>
+			<sequence>
+				<!-- HID Profile -->
+				<uuid value="0x1124" />
+				<!-- Version 1.00 -->
+				<uint16 value="0x0100" />
+			</sequence>
+		</sequence>
+	</attribute>
+	<!-- Service Name -->
+	<attribute id="0x0100">
+		<text value="V2G HID Gamepad" />
+	</attribute>
+	<!-- Service Description -->
+	<attribute id="0x0101">
+		<text value="V2G HID Gamepad controller" />
+	</attribute>
+	<!-- Provider Name -->
+	<attribute id="0x0102">
+		<text value="ACSD" />
+	</attribute>
+	<!-- HID Parser Version -->
+	<attribute id="0x0201">
+		<!-- Version 1.1.1 -->
+		<uint16 value="0x0111" />
+	</attribute>
+	<!-- HID Device Subclass -->
+	<attribute id="0x0202">
+		<!-- Joystick Subclass 00000100 = 0x04 -->
+		<!-- Gamepad Subclass 00001000 = 0x08 -->
+		<uint8 value="0x08" />
+		<!-- Keyboard Subclass 01000000 = 0x40 -->
+		<!-- Pointer Subclass 10000000 = 0x80 -->
+	</attribute>
+	<!-- HID Country Code -->
+	<attribute id="0x0203">
+		<!-- International (ISO)  -->
+		<uint8 value="0x0D" />
+	</attribute>
+	<!-- HID Virtual Cable -->
+	<attribute id="0x0204">
+		<boolean value="true" />
+	</attribute>
+	<!-- HID Reconnect Initiate -->
+	<attribute id="0x0205">
+		<boolean value="false" />
+	</attribute>
+	<!-- HID Descriptor List -->
+	<attribute id="0x0206">
+		<sequence>
+			<sequence>
+				<!-- Report Type-->
+				<uint8 value="0x22" />
+				<!-- Created using the USB Descriptor Tool
+					See input_report_descriptor directory for files
+					0x05, 0x01,                    // USAGE_PAGE (Generic Desktop)
+					0x09, 0x05,                    // USAGE (Gamepad)
+					0xa1, 0x01,                    // COLLECTION (Application)
+					0x09, 0x01,                    //   USAGE (Pointer)
+					0xa1, 0x00,                    //   COLLECTION (Physical)
+					0x05, 0x01,                    //     USAGE_PAGE (Generic Desktop)
+					0x09, 0x30,                    //     USAGE (X)
+					0x09, 0x31,                    //     USAGE (Y)
+					# 0x09, 0x32,					   //     USAGE (Z)
+					0x15, 0x81,                    //     LOGICAL_MINIMUM (-127)
+					0x25, 0x7f,                    //     LOGICAL_MAXIMUM (127)
+					0x75, 0x08,                    //     REPORT_SIZE (8)
+					0x95, 0x02,                    //     REPORT_COUNT (2)
+					0x81, 0x02,                    //     INPUT (Data,Var,Abs)
+					0x05, 0x09,                    //     USAGE_PAGE (Button)
+					0x19, 0x01,                    //     USAGE_MINIMUM (Button 1)
+					0x29, 0x08,                    //     USAGE_MAXIMUM (Button 8)
+					0x15, 0x00,                    //     LOGICAL_MINIMUM (0)
+					0x25, 0x01,                    //     LOGICAL_MAXIMUM (1)
+					0x95, 0x08,                    //     REPORT_COUNT (8)
+					0x75, 0x01,                    //     REPORT_SIZE (1)
+					0x81, 0x02,                    //     INPUT (Data,Var,Abs)
+					0x95, 0x01,                    //     REPORT_COUNT (1)
+					0x75, 0x05,                    //     REPORT_SIZE (5)
+					0x81, 0x03,                    //     INPUT (Cnst,Var,Abs)
+					0xc0,                          //   END_COLLECTION
+					0xc0                           // END_COLLECTION
+				-->
+				<text encoding="hex" value="05010905a1010901a1000501093009311581257f75089502810205091901290815002501950875018102950175058103c0c0" />
+			</sequence>
+		</sequence>
+	</attribute>
+	<!-- HID LANGID Base List -->
+	<attribute id="0x0207">
+		<sequence>
+			<sequence>
+				<!-- English (United States) -->
+				<uint16 value="0x0409" />
+				<!-- Bluetooth String Offset -->
+				<uint16 value="0x0100" />
+			</sequence>
+		</sequence>
+	</attribute>
+	<!-- HID Profile Version -->
+	<attribute id="0x020b">
+		<uint16 value="0x0100" />
+	</attribute>
+	<!-- HID Supervision Timeout -->
+	<attribute id="0x020c">
+		<uint16 value="0x0c80" />
+	</attribute>
+	<!-- HID Normally Connectable -->
+	<attribute id="0x020d">
+		<boolean value="true" />
+	</attribute>
+	<!-- HID Boot Device -->
+	<attribute id="0x020e">
+		<boolean value="false" />
+	</attribute>
+	<!-- HID SSR Host Max Latency -->
+	<attribute id="0x020f">
+		<uint16 value="0x0640" />
+	</attribute>
+	<!-- HID SSR Host Min Timeout -->
+	<attribute id="0x0210">
+		<uint16 value="0x0320" />
+	</attribute>
+</record>
